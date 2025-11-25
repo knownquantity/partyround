@@ -22,9 +22,9 @@
     <meta property="twitter:image" content="https://partyround.net/PLACEHOLDER.png">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./PRfavicon.png">
-    <link rel="apple-touch-icon" href="./PRfavicon.png">
-    <link rel="shortcut icon" href="./PRfavicon.png" type="image/png">
+    <link rel="icon" type="image/png" href="./bluefavicon.png">
+    <link rel="apple-touch-icon" href="./bluefavicon.png">
+    <link rel="shortcut icon" href="./bluefavicon.png" type="image/png">
     
     <style>
         * {
@@ -54,80 +54,119 @@
             margin-bottom: 40px;
             letter-spacing: -1px;
             color: #003499;
+            display: flex;
+            gap: 15px;
+        }
+
+        .word {
             position: relative;
-            animation: glitch 2s infinite;
+            text-shadow: 
+                2px 2px 0 #003499,
+                4px 4px 0 #003499,
+                6px 6px 0 #003499;
         }
 
-        @keyframes glitch {
-            0%, 80%, 82%, 84%, 86%, 88%, 90%, 100% {
-                transform: translate(0);
-                opacity: 1;
-            }
-            81% {
-                transform: translate(-2px, 1px);
-                opacity: 0.8;
-            }
-            83% {
-                transform: translate(2px, -1px);
-                opacity: 0.9;
-            }
-            85% {
-                transform: translate(-1px, 2px);
-                opacity: 0.85;
-            }
-            87% {
-                transform: translate(2px, 1px);
-                opacity: 0.8;
-            }
-            89% {
-                transform: translate(-2px, -1px);
-                opacity: 0.9;
-            }
+        .word-party {
+            animation: flicker-party 3s infinite, gradient-party 4s linear infinite;
         }
 
-        h1::before,
-        h1::after {
-            content: 'Party Round';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        .word-round {
+            animation: flicker-round 3s infinite 0.5s, gradient-round 4s linear infinite;
         }
 
-        h1::before {
-            animation: glitch-before 2s infinite;
-            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-            transform: translate(-2px, 0);
-            opacity: 0;
+        @keyframes flicker-party {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 1; }
+            51% { opacity: 0.3; }
+            52% { opacity: 1; }
+            53% { opacity: 0.3; }
+            54% { opacity: 1; }
         }
 
-        h1::after {
-            animation: glitch-after 2s infinite;
-            clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
-            transform: translate(2px, 0);
-            opacity: 0;
+        @keyframes flicker-round {
+            0%, 100% { opacity: 1; }
+            40% { opacity: 1; }
+            41% { opacity: 0.3; }
+            42% { opacity: 1; }
+            43% { opacity: 0.3; }
+            44% { opacity: 1; }
+            45% { opacity: 0.3; }
+            46% { opacity: 1; }
         }
 
-        @keyframes glitch-before {
-            0%, 80%, 100% {
-                opacity: 0;
+        @keyframes gradient-party {
+            0% { 
+                color: #003499;
+                text-shadow: 
+                    2px 2px 0 #003499,
+                    4px 4px 0 #003499,
+                    6px 6px 0 #003499;
             }
-            81%, 83%, 85%, 87%, 89% {
-                opacity: 0.7;
-                transform: translate(-3px, 0);
-                color: #00ffff;
-            }
-        }
-
-        @keyframes glitch-after {
-            0%, 80%, 100% {
-                opacity: 0;
-            }
-            82%, 84%, 86%, 88%, 90% {
-                opacity: 0.7;
-                transform: translate(3px, 0);
+            25% { 
                 color: #ff00ff;
+                text-shadow: 
+                    2px 2px 0 #cc00cc,
+                    4px 4px 0 #990099,
+                    6px 6px 0 #660066;
+            }
+            50% { 
+                color: #00ffff;
+                text-shadow: 
+                    2px 2px 0 #00cccc,
+                    4px 4px 0 #009999,
+                    6px 6px 0 #006666;
+            }
+            75% { 
+                color: #ffff00;
+                text-shadow: 
+                    2px 2px 0 #cccc00,
+                    4px 4px 0 #999900,
+                    6px 6px 0 #666600;
+            }
+            100% { 
+                color: #003499;
+                text-shadow: 
+                    2px 2px 0 #003499,
+                    4px 4px 0 #003499,
+                    6px 6px 0 #003499;
+            }
+        }
+
+        @keyframes gradient-round {
+            0% { 
+                color: #ff00ff;
+                text-shadow: 
+                    2px 2px 0 #cc00cc,
+                    4px 4px 0 #990099,
+                    6px 6px 0 #660066;
+            }
+            25% { 
+                color: #00ffff;
+                text-shadow: 
+                    2px 2px 0 #00cccc,
+                    4px 4px 0 #009999,
+                    6px 6px 0 #006666;
+            }
+            50% { 
+                color: #ffff00;
+                text-shadow: 
+                    2px 2px 0 #cccc00,
+                    4px 4px 0 #999900,
+                    6px 6px 0 #666600;
+            }
+            75% { 
+                color: #00ff00;
+                text-shadow: 
+                    2px 2px 0 #00cc00,
+                    4px 4px 0 #009900,
+                    6px 6px 0 #006600;
+            }
+            100% { 
+                color: #ff00ff;
+                text-shadow: 
+                    2px 2px 0 #cc00cc,
+                    4px 4px 0 #990099,
+                    6px 6px 0 #660066;
             }
         }
 
@@ -153,10 +192,31 @@
             color: #000000;
             text-decoration: none;
             transition: color 0.2s;
+            position: relative;
+            display: inline-block;
         }
 
         a:hover {
             text-decoration: underline;
+            animation: link-glitch 0.3s infinite;
+        }
+
+        @keyframes link-glitch {
+            0%, 100% {
+                transform: translate(0);
+            }
+            20% {
+                transform: translate(-1px, 1px);
+            }
+            40% {
+                transform: translate(1px, -1px);
+            }
+            60% {
+                transform: translate(-1px, -1px);
+            }
+            80% {
+                transform: translate(1px, 1px);
+            }
         }
 
         /* Individual neon/retro colors for each portfolio company */
@@ -167,7 +227,7 @@
         .section-content a:nth-of-type(5):hover { color: #ff6600; } /* Orange - Interface */
         .section-content a:nth-of-type(6):hover { color: #00ccff; } /* Sky Blue - JokeRace */
         .section-content a:nth-of-type(7):hover { color: #9d00ff; } /* Purple - Limitless */
-        .section-content a:nth-of-type(8):hover { color: #ff3366; } /* Red-Pink - Lore */
+        .section-content a:nth-of-type(8):hover { color: #ff3366; } /* Red-Pink - Propaganda */
         .section-content a:nth-of-type(9):hover { color: #ffff00; } /* Yellow - QR Coin */
         .section-content a:nth-of-type(10):hover { color: #66ff00; } /* Chartreuse - Scene Infrastructure */
         .section-content a:nth-of-type(11):hover { color: #ff00cc; } /* Pink - Thirdweb */
@@ -210,31 +270,34 @@
 </head>
 <body>
     <div class="container">
-        <h1>Party Round</h1>
+        <h1>
+            <span class="word word-party">Party</span>
+            <span class="word word-round">Round</span>
+        </h1>
 
         <div class="section">
-            <div class="section-title">Who//</div>
+            <div class="section-title">About//</div>
             <div class="section-content">
-                A group of young and chronically online investors, builders and operators you've never heard of. By design. We stay off the main stage, plugged into the corners of internet culture where meaningful opportunities actually surface. We avoid the loud, clout-driven deals of the startup industrial complex and rely on word-of-mouth from the communities we trust.
+                Investment DAO backing early-stage teams in consumer AI, crypto, and hardware. We invest in projects reshaping internet culture - new social graphs, experimental networks, creative tools, primitives for human connection, and technologies that bridge the online and offline.
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">What//</div>
+            <div class="section-title">Crew//</div>
             <div class="section-content">
-                An investment vehicle backing early-stage teams in consumer AI, crypto, and hardware. We invest in projects reshaping internet culture - new social graphs, experimental networks, creative tools, primitives for human connection, and technologies that bridge the online and offline.
+                Comprised of highly networked yet under-the-radar investors, builders and operators, thriving on context and trust. Operating quietly is our edge. It sharpens our deal flow and gives us deeper leverage before and after we invest.
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">Where//</div>
+            <div class="section-title">Scope//</div>
             <div class="section-content">
-                Bias for US-based startups, but geography is negotiable. Pre-seed and seed stage, $250-750k checks.
+                Bias for US-based startups, but geography is negotiable. Pre-seed and seed stages. $250-750k checks with follow-ons reserved for selective Series A rounds.
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">Why//</div>
+            <div class="section-title">Lore//</div>
             <div class="section-content">
                 Institutional backing wrapped in party round simplicity. We move fast and combine sophisticated capital with the social and distribution power of a connected network, all while minimizing the logistical and signal drawbacks of traditional, fragmented party rounds.
             </div>
@@ -243,27 +306,27 @@
         <div class="section">
             <div class="section-title">Guest List//</div>
             <div class="section-content">
-                <a href="https://www.aux.xyz" target="_blank" rel="noopener noreferrer">Aux</a>, 
-                <a href="https://bueno.art" target="_blank" rel="noopener noreferrer">Bueno Art</a>, 
-                <a href="https://chippedsocial.com" target="_blank" rel="noopener noreferrer">Chipped</a>, 
-                <a href="https://www.askdiem.com" target="_blank" rel="noopener noreferrer">Diem</a>, 
-                <a href="https://www.interface.social" target="_blank" rel="noopener noreferrer">Interface</a>, 
-                <a href="https://jokerace.io" target="_blank" rel="noopener noreferrer">JokeRace</a>, 
-                <a href="https://limitless.exchange" target="_blank" rel="noopener noreferrer">Limitless</a>, 
-                <a href="https://www.loreobsessed.com" target="_blank" rel="noopener noreferrer">Lore</a>, 
-                <a href="https://qrcoin.fun" target="_blank" rel="noopener noreferrer">QR Coin</a>, 
-                <a href="https://www.sceneinfrastructure.com" target="_blank" rel="noopener noreferrer">Scene Infrastructure</a>, 
-                <a href="https://thirdweb.com" target="_blank" rel="noopener noreferrer">Thirdweb</a>, 
-                <a href="https://time.fun" target="_blank" rel="noopener noreferrer">Time.fun</a>, 
-                <a href="https://trace.fan" target="_blank" rel="noopener noreferrer">Trace</a>, 
-                <a href="https://zora.co" target="_blank" rel="noopener noreferrer">Zora</a>
+                <a href="https://www.aux.xyz" target="_blank" rel="noopener noreferrer" data-text="Aux">Aux</a>, 
+                <a href="https://bueno.art" target="_blank" rel="noopener noreferrer" data-text="Bueno Art">Bueno Art</a>, 
+                <a href="https://chippedsocial.com" target="_blank" rel="noopener noreferrer" data-text="Chipped">Chipped</a>, 
+                <a href="https://www.askdiem.com" target="_blank" rel="noopener noreferrer" data-text="Diem">Diem</a>, 
+                <a href="https://www.interface.social" target="_blank" rel="noopener noreferrer" data-text="Interface">Interface</a>, 
+                <a href="https://jokerace.io" target="_blank" rel="noopener noreferrer" data-text="JokeRace">JokeRace</a>, 
+                <a href="https://limitless.exchange" target="_blank" rel="noopener noreferrer" data-text="Limitless">Limitless</a>, 
+                <a href="https://propaganda.now" target="_blank" rel="noopener noreferrer" data-text="Propaganda">Propaganda</a>, 
+                <a href="https://qrcoin.fun" target="_blank" rel="noopener noreferrer" data-text="QR Coin">QR Coin</a>, 
+                <a href="https://www.sceneinfrastructure.com" target="_blank" rel="noopener noreferrer" data-text="Scene Infrastructure">Scene Infrastructure</a>, 
+                <a href="https://thirdweb.com" target="_blank" rel="noopener noreferrer" data-text="Thirdweb">Thirdweb</a>, 
+                <a href="https://time.fun" target="_blank" rel="noopener noreferrer" data-text="Time.fun">Time.fun</a>, 
+                <a href="https://trace.fan" target="_blank" rel="noopener noreferrer" data-text="Trace">Trace</a>, 
+                <a href="https://zora.co" target="_blank" rel="noopener noreferrer" data-text="Zora">Zora</a>
             </div>
         </div>
 
         <div class="contact">
-            <div class="section-title">Contact//</div>
+            <div class="section-title">Let's Party//</div>
             <div class="section-content">
-                Pitch us at <a href="mailto:rsvp@partyround.net">rsvp@partyround.net</a>
+                Pitch us at <a href="mailto:rsvp@partyround.net" data-text="rsvp@partyround.net">rsvp@partyround.net</a>
             </div>
         </div>
     </div>
