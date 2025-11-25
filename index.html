@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Round</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Party Round">
+    <meta property="og:description" content="An investment vehicle backing early-stage teams in consumer AI, crypto, and hardware">
+    <meta property="og:image" content="social-share.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Party Round">
+    <meta name="twitter:description" content="An investment vehicle backing early-stage teams in consumer AI, crypto, and hardware">
+    <meta name="twitter:image" content="social-share.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #BAFFF4;
+            color: #000000;
+            line-height: 1.7;
+            padding: 60px 20px;
+            min-height: 100vh;
+            cursor: none;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 80px;
+            letter-spacing: -1px;
+            color: #003499;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #003499;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-content {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #000000;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .portfolio-item {
+            font-size: 16px;
+            color: #000000;
+            padding: 12px 0;
+            transition: color 0.2s;
+        }
+
+        .portfolio-item:nth-child(1):hover a { color: #ff00ff; } /* Magenta */
+        .portfolio-item:nth-child(2):hover a { color: #00ffff; } /* Cyan */
+        .portfolio-item:nth-child(3):hover a { color: #ffff00; } /* Yellow */
+        .portfolio-item:nth-child(4):hover a { color: #ff0080; } /* Hot Pink */
+        .portfolio-item:nth-child(5):hover a { color: #00ff00; } /* Lime */
+        .portfolio-item:nth-child(6):hover a { color: #ff6600; } /* Orange */
+        .portfolio-item:nth-child(7):hover a { color: #8000ff; } /* Purple */
+        .portfolio-item:nth-child(8):hover a { color: #ff0000; } /* Red */
+        .portfolio-item:nth-child(9):hover a { color: #00ff80; } /* Spring Green */
+        .portfolio-item:nth-child(10):hover a { color: #ff00ff; } /* Magenta */
+        .portfolio-item:nth-child(11):hover a { color: #00ffff; } /* Cyan */
+        .portfolio-item:nth-child(12):hover a { color: #ffff00; } /* Yellow */
+
+        a {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #00ff00;
+            text-decoration: underline;
+        }
+
+        .contact {
+            margin-top: 60px;
+            padding-top: 0px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+                margin-bottom: 60px;
+            }
+
+            .section {
+                margin-bottom: 50px;
+            }
+
+            .section-content {
+                font-size: 17px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 8px;
+            }
+
+            .portfolio-item {
+                font-size: 15px;
+            }
+        }
+
+        ::selection {
+            background: #000000;
+            color: #BAFFF4;
+        }
+
+        .cursor {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: #003499;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: opacity 0.3s;
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: #003499;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Party Round</h1>
+
+        <div class="section">
+            <div class="section-title">Who//</div>
+            <div class="section-content">
+                A group of young and chronically online investors, builders and operators you've never heard of. By design. We stay off the main stage, plugged into the corners of internet culture where meaningful opportunities actually surface. We avoid the loud, clout-driven deals of the startup industrial complex and rely on word-of-mouth from the communities we trust.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">What//</div>
+            <div class="section-content">
+                An investment vehicle backing early-stage teams in consumer AI, crypto, and hardware. We invest in projects reshaping internet culture - new social graphs, experimental networks, creative tools, primitives for human connection, and technologies that bridge the online and offline.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Why//</div>
+            <div class="section-content">
+                Institutional backing wrapped in party round simplicity. Unlike traditional party rounds with meaningless dilution and cluttered cap tables, we're sophisticated capital that moves fast and adds real value beyond the wire.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Guest List//</div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item"><a href="https://www.aux.xyz" target="_blank" rel="noopener noreferrer">Aux</a></div>
+                <div class="portfolio-item"><a href="https://bueno.art" target="_blank" rel="noopener noreferrer">Bueno Art</a></div>
+                <div class="portfolio-item"><a href="https://www.canvair.co" target="_blank" rel="noopener noreferrer">Canvair</a></div>
+                <div class="portfolio-item"><a href="https://chippedsocial.com" target="_blank" rel="noopener noreferrer">Chipped</a></div>
+                <div class="portfolio-item"><a href="https://www.askdiem.com" target="_blank" rel="noopener noreferrer">Diem</a></div>
+                <div class="portfolio-item"><a href="https://www.interface.social" target="_blank" rel="noopener noreferrer">Interface</a></div>
+                <div class="portfolio-item"><a href="https://limitless.exchange" target="_blank" rel="noopener noreferrer">Limitless</a></div>
+                <div class="portfolio-item"><a href="https://www.loreobsessed.com" target="_blank" rel="noopener noreferrer">Lore</a></div>
+                <div class="portfolio-item"><a href="https://ticketsoft.com" target="_blank" rel="noopener noreferrer">Ticketsoft</a></div>
+                <div class="portfolio-item"><a href="https://time.fun" target="_blank" rel="noopener noreferrer">Time.fun</a></div>
+                <div class="portfolio-item"><a href="https://trace.fan" target="_blank" rel="noopener noreferrer">Trace</a></div>
+                <div class="portfolio-item"><a href="https://zora.co" target="_blank" rel="noopener noreferrer">Zora</a></div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="section-title">Contact//</div>
+            <div class="section-content">
+                <a href="/cdn-cgi/l/email-protection#84ece1e8e8ebc4f4e5f6f0fdf6ebf1eae0aaeae1f0"><span class="__cf_email__" data-cfemail="751d1019191a35051407010c071a001b115b1b1001">[email&#160;protected]</span></a>
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Custom cursor
+        const cursor = document.createElement('div');
+        cursor.className = 'cursor';
+        document.body.appendChild(cursor);
+
+        // Cursor trail
+        const trailLength = 12;
+        const trails = [];
+        for (let i = 0; i < trailLength; i++) {
+            const trail = document.createElement('div');
+            trail.className = 'cursor-trail';
+            document.body.appendChild(trail);
+            trails.push({
+                element: trail,
+                x: 0,
+                y: 0
+            });
+        }
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.left = mouseX - 4 + 'px';
+            cursor.style.top = mouseY - 4 + 'px';
+        });
+
+        // Animate trail
+        function animateTrail() {
+            let x = mouseX;
+            let y = mouseY;
+
+            trails.forEach((trail, index) => {
+                trail.element.style.left = x - 2 + 'px';
+                trail.element.style.top = y - 2 + 'px';
+                
+                const nextTrail = trails[index + 1] || trails[0];
+                x += (nextTrail.x - x) * 0.3;
+                y += (nextTrail.y - y) * 0.3;
+                
+                trail.x = x;
+                trail.y = y;
+            });
+
+            requestAnimationFrame(animateTrail);
+        }
+
+        animateTrail();
+
+        // Hide cursor when leaving window
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+            trails.forEach(trail => trail.element.s
