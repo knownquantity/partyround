@@ -22,9 +22,9 @@
     <meta property="twitter:image" content="https://partyround.net/PLACEHOLDER.png">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./bluefavicon.png">
-    <link rel="apple-touch-icon" href="./bluefavicon.png">
-    <link rel="shortcut icon" href="./bluefavicon.png" type="image/png">
+    <link rel="icon" type="image/png" href="./PRfavicon.png">
+    <link rel="apple-touch-icon" href="./PRfavicon.png">
+    <link rel="shortcut icon" href="./PRfavicon.png" type="image/png">
     
     <style>
         * {
@@ -54,6 +54,81 @@
             margin-bottom: 40px;
             letter-spacing: -1px;
             color: #003499;
+            position: relative;
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 80%, 82%, 84%, 86%, 88%, 90%, 100% {
+                transform: translate(0);
+                opacity: 1;
+            }
+            81% {
+                transform: translate(-2px, 1px);
+                opacity: 0.8;
+            }
+            83% {
+                transform: translate(2px, -1px);
+                opacity: 0.9;
+            }
+            85% {
+                transform: translate(-1px, 2px);
+                opacity: 0.85;
+            }
+            87% {
+                transform: translate(2px, 1px);
+                opacity: 0.8;
+            }
+            89% {
+                transform: translate(-2px, -1px);
+                opacity: 0.9;
+            }
+        }
+
+        h1::before,
+        h1::after {
+            content: 'Party Round';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1::before {
+            animation: glitch-before 2s infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+            transform: translate(-2px, 0);
+            opacity: 0;
+        }
+
+        h1::after {
+            animation: glitch-after 2s infinite;
+            clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+            transform: translate(2px, 0);
+            opacity: 0;
+        }
+
+        @keyframes glitch-before {
+            0%, 80%, 100% {
+                opacity: 0;
+            }
+            81%, 83%, 85%, 87%, 89% {
+                opacity: 0.7;
+                transform: translate(-3px, 0);
+                color: #00ffff;
+            }
+        }
+
+        @keyframes glitch-after {
+            0%, 80%, 100% {
+                opacity: 0;
+            }
+            82%, 84%, 86%, 88%, 90% {
+                opacity: 0.7;
+                transform: translate(3px, 0);
+                color: #ff00ff;
+            }
         }
 
         .section {
@@ -152,9 +227,16 @@
         </div>
 
         <div class="section">
+            <div class="section-title">Where//</div>
+            <div class="section-content">
+                Bias for US-based startups, but geography is negotiable. Pre-seed and seed stage, $250-750k checks.
+            </div>
+        </div>
+
+        <div class="section">
             <div class="section-title">Why//</div>
             <div class="section-content">
-                Institutional backing wrapped in party round simplicity. We move fast and combine sophisticated capital with the social and distribution power of a connected network, all while minimizing the logistical and signal drawbacks of traditional, fragmented party rounds. 
+                Institutional backing wrapped in party round simplicity. We move fast and combine sophisticated capital with the social and distribution power of a connected network, all while minimizing the logistical and signal drawbacks of traditional, fragmented party rounds.
             </div>
         </div>
 
