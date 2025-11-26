@@ -181,6 +181,79 @@
             color: #003499;
             margin-bottom: 16px;
             letter-spacing: 0.5px;
+            position: relative;
+            display: inline-block;
+            animation: glitch-title 5s infinite;
+        }
+
+        .section-title::before,
+        .section-title::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .section-title::before {
+            animation: glitch-before 3s infinite;
+            color: #ff00ff;
+            z-index: -1;
+        }
+
+        .section-title::after {
+            animation: glitch-after 2.5s infinite;
+            color: #00ffff;
+            z-index: -2;
+        }
+
+        @keyframes glitch-title {
+            0%, 90%, 100% {
+                transform: translate(0);
+            }
+            91% {
+                transform: translate(-2px, 2px);
+            }
+            92% {
+                transform: translate(2px, -2px);
+            }
+            93% {
+                transform: translate(-2px, -2px);
+            }
+            94% {
+                transform: translate(2px, 2px);
+            }
+        }
+
+        @keyframes glitch-before {
+            0%, 94%, 100% {
+                transform: translate(0);
+                opacity: 0;
+            }
+            95% {
+                transform: translate(-3px, 0);
+                opacity: 0.7;
+            }
+            96% {
+                transform: translate(3px, 0);
+                opacity: 0;
+            }
+        }
+
+        @keyframes glitch-after {
+            0%, 96%, 100% {
+                transform: translate(0);
+                opacity: 0;
+            }
+            97% {
+                transform: translate(3px, 0);
+                opacity: 0.7;
+            }
+            98% {
+                transform: translate(-3px, 0);
+                opacity: 0;
+            }
         }
 
         .section-content {
@@ -281,35 +354,35 @@
         </h1>
 
         <div class="section">
-            <div class="section-title">About//</div>
+            <div class="section-title" data-text="About//">About//</div>
             <div class="section-content">
                 Investment DAO backing early-stage teams in consumer AI, crypto, and hardware. We invest in projects reshaping internet culture - new social graphs, experimental networks, creative tools, primitives for human connection, and technologies that bridge the online and offline.
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">Crew//</div>
+            <div class="section-title" data-text="Crew//">Crew//</div>
             <div class="section-content">
                 Comprised of highly networked yet under-the-radar investors, builders and operators, thriving on context and trust. Operating quietly is our edge. It sharpens our deal flow and gives us deeper leverage before and after we invest.
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">Scope//</div>
+            <div class="section-title" data-text="Scope//">Scope//</div>
             <div class="section-content">
                 Bias for US-based startups, but geography is negotiable. Pre-seed and seed stages. $250-750k checks with follow-ons reserved for selective Series A rounds.
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">Lore//</div>
+            <div class="section-title" data-text="Lore//">Lore//</div>
             <div class="section-content">
                 Institutional backing wrapped in party round simplicity. We move fast and combine sophisticated capital with the social and distribution power of a connected network, all while minimizing the logistical and signal drawbacks of traditional, fragmented party rounds.
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">Guest List//</div>
+            <div class="section-title" data-text="Guest List//">Guest List//</div>
             <div class="section-content">
                 <a href="https://www.aux.xyz" target="_blank" rel="noopener noreferrer" data-text="Aux">Aux</a>, 
                 <a href="https://bueno.art" target="_blank" rel="noopener noreferrer" data-text="Bueno Art">Bueno Art</a>, 
@@ -329,7 +402,7 @@
         </div>
 
         <div class="contact">
-            <div class="section-title">RSVP//</div>
+            <div class="section-title" data-text="RSVP//">RSVP//</div>
             <div class="section-content">
                 Pitch us at <a href="mailto:rsvp@partyround.net" data-text="rsvp@partyround.net">rsvp@partyround.net</a>
             </div>
